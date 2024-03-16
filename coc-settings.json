@@ -1,0 +1,47 @@
+{
+	"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/17.0.3/clangd_17.0.3/bin/clangd",
+	"inlayHint.enable": false,
+	"suggest.completionItemKindLabels": {
+		"text" :  " 󰉿 ",
+		"method" :  " 󰆧 ",
+		"function" :  " 󰊕 ",
+		"field" :  " 󰜢 ",
+		"variable" :  " 󰀫 ",
+		"interface" :  "  ",
+		"module" :  "  ",
+		"property" :  " 󰜢 ",
+		"value" :  " 󰎠 ",
+		"enum" :  "  ",
+		"keyword" :  " 󰌋 ",
+		"file" :  " 󰈙 ",
+		"enumMember" :  "  ",
+		"constant" :  " 󰏿 ",
+		"event" :  "  ",
+		"operator" :  " 󰆕 ",
+		"typeParameter": "<>",
+		"class": " פּ ",
+		"struct": "  ",
+		"reference": "  ",
+		"folder": " ﱮ ",
+		"color": "  ",
+		"unit": " 塞 ",
+		"snippet": "  ",
+		"constructor": "  ",
+		"default": "  "
+	},
+	"diagnostic.virtualText": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
+	"diagnostic.checkCurrentLine": true,
+	"signature.target": "echo",
+	"hover.target": "echo",
+	"languageserver": {
+			"go":{
+				"command": "gopls",
+				"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+				"filetypes": ["go"],
+				"initializationOptions": {
+					"useplaceholders": true
+				}
+			}
+		}
+}

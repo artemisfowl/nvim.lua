@@ -193,10 +193,6 @@ vim.cmd[[
 		autocmd!
 		autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
 	augroup END
-	"set statusline=%F%m%r%h%w\ 
-	"set statusline+=%{fugitive#statusline()}\    
-	"set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
-	"set statusline+=\ [line\ %l\/%L]          
 
 	set statusline=\ %f%m%r%h%w\ %{b:gitbranch}\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
 ]]

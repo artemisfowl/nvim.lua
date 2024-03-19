@@ -11,6 +11,7 @@ vim.keymap.set("n", "<C-h>", "<C-w>h") -- move the cursor from the top split to 
 vim.keymap.set("n", "<C-l>", "<C-w>l") -- move the cursor from the top split to the split right
 vim.keymap.set("n", "<leader>q", "<C-w>q") -- close the current split
 vim.keymap.set("n", "<leader>h", ":noh<CR>") -- remove the highlight till the next search
+vim.keymap.set("n", "<C-t>", "<C-w><C-r>") -- Swap the splits
 
 -- [visual mode] custom key mappings
 vim.keymap.set("v", "H", "^") -- move the cursor to the start of the current line

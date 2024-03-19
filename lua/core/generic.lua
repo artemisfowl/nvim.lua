@@ -1,6 +1,6 @@
 -- generic settings (to be applied across all the files opened)
 -- [global settings]
-vim.o.rulerformat = "%=[%l,%c%V] [%p%%]"
+--vim.o.statusline = "%=[%l,%c%V] [%p%%]"
 vim.o.ruler = true
 vim.o.laststatus = 2
 vim.o.autochdir = false
@@ -162,6 +162,41 @@ vim.cmd[[
 
 -- settings for tagbar
 vim.cmd[[
-" Tagbar configuration
-nnoremap <silent> <F7> :Tagbar<CR>
+	" Tagbar configuration
+	nnoremap <silent> <F7> :Tagbar<CR>
+]]
+
+-- settings related to git blame delay
+vim.cmd[[
+	let g:gitblame_delay = 10 " 10 milliseconds
+]]
+
+-- show branch information in the status line if branch information is present
+vim.cmd[[
+	function! StatuslineGitBranch()
+		let b:gitbranch=""
+		if &modifiable
+			try
+				lcd %:p:h
+			catch
+				return
+			endtry
+			let l:gitrevparse=system("git rev-parse --abbrev-ref HEAD")
+			lcd -
+			if l:gitrevparse!~"fatal: not a git repository"
+				let b:gitbranch="[".substitute(l:gitrevparse, '\n', '', 'g')."]"
+			endif
+		endif
+	endfunction
+
+	augroup GetGitBranch
+		autocmd!
+		autocmd VimEnter,WinEnter,BufEnter * call StatuslineGitBranch()
+	augroup END
+	"set statusline=%F%m%r%h%w\ 
+	"set statusline+=%{fugitive#statusline()}\    
+	"set statusline+=[%{strlen(&fenc)?&fenc:&enc}]
+	"set statusline+=\ [line\ %l\/%L]          
+
+	set statusline=\ %f%m%r%h%w\ %{b:gitbranch}\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
 ]]

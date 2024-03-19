@@ -41,6 +41,10 @@ return require('packer').startup(function(use)
 
 	use {'nvim-tree/nvim-web-devicons'}
 	use {'vim-scripts/Tagbar'}
+	use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
+	use {'f-person/git-blame.nvim'}
+	use {'tpope/vim-fugitive'}
+	use {"akinsho/toggleterm.nvim"}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

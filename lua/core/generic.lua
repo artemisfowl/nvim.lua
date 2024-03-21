@@ -196,3 +196,9 @@ vim.cmd[[
 
 	set statusline=\ %f%m%r%h%w\ %{b:gitbranch}\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
 ]]
+
+-- remove any trailing whitespace in the lines
+vim.cmd[[
+	" Remove any trailing whitespace that is in the file
+	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+]]

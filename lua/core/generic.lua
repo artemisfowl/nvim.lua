@@ -196,3 +196,10 @@ vim.cmd[[
 
 	set statusline=\ %f%m%r%h%w\ %{b:gitbranch}\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
 ]]
+
+-- Setting the keymappings for floaterm
+vim.cmd[[
+	let g:floaterm_width = 0.9
+	let g:floaterm_height = 0.9
+	let g:floaterm_keymap_toggle = '<F12>'
+]]

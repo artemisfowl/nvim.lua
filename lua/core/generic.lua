@@ -203,3 +203,9 @@ vim.cmd[[
 	let g:floaterm_height = 0.9
 	let g:floaterm_keymap_toggle = '<F12>'
 ]]
+
+-- remove any trailing whitespace in the lines
+vim.cmd[[
+	" Remove any trailing whitespace that is in the file
+	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+]]

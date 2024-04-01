@@ -19,8 +19,10 @@ vim.opt.tags = 'tags'
 -- [clipboard related settings]
 -- fixme: try to keep as less of this as possible
 vim.cmd[[ set clipboard=unnamed ]]
-vim.cmd[[ map! <silent> <F4> <ESC>:NERDTreeToggle<CR> ]]
-vim.cmd[[ map <silent> <F4> :NERDTreeToggle<CR> ]]
+--vim.cmd[[ map! <silent> <F4> <ESC>:NERDTreeToggle<CR> ]]
+--vim.cmd[[ map <silent> <F4> :NERDTreeToggle<CR> ]]
+vim.cmd[[ map! <silent> <F4> <ESC>:NvimTreeToggle<CR> ]]
+vim.cmd[[ map <silent> <F4> :NvimTreeToggle<CR> ]]
 vim.cmd[[
 	augroup highlight_yank
 	autocmd!
@@ -32,7 +34,7 @@ vim.cmd[[
 vim.cmd[[ filetype plugin indent on ]]
 
 -- [Syntax and grep related functions]
-vim.cmd[[ 
+vim.cmd[[
 	syntax enable
 	set grepprg=grep\ -nH\ $*
 ]]
@@ -44,7 +46,7 @@ vim.cmd[[
 ]]
 
 -- [fold related settings]
-vim.cmd[[ 
+vim.cmd[[
 	set foldmethod=indent
 	set foldnestmax=10
 	set nofoldenable
@@ -86,7 +88,7 @@ vim.cmd[[
 
 
 -- [CoC completion related mappings]
-vim.cmd[[ 
+vim.cmd[[
   	function! s:check_back_space() abort
 		let col = col('.') - 1
 		return !col || getline('.')[col - 1]  =~# '\s'

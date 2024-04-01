@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/sb/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/sb/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/sb/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -163,6 +168,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sb/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/sb/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/sb/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 

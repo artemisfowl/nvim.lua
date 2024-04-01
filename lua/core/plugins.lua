@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
 		}
 	}
 	use {'neoclide/coc.nvim', branch = 'release'}
-	use {'preservim/nerdtree'}
+	--use {'preservim/nerdtree'}
 	use {'ryanoasis/vim-devicons'}
 
 	use {'nvim-tree/nvim-web-devicons'}
@@ -45,6 +45,12 @@ return require('packer').startup(function(use)
 	use {'f-person/git-blame.nvim'}
 	use {'tpope/vim-fugitive'}
 	use {'voldikss/vim-floaterm'}
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional
+		},
+	}
 
 
 	-- Automatically set up your configuration after cloning packer.nvim

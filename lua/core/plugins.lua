@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
 		}
 	}
 	use {'neoclide/coc.nvim', branch = 'release'}
-	--use {'preservim/nerdtree'}
 	use {'ryanoasis/vim-devicons'}
 
 	use {'nvim-tree/nvim-web-devicons'}
@@ -51,11 +50,20 @@ return require('packer').startup(function(use)
 			'nvim-tree/nvim-web-devicons', -- optional
 		},
 	}
+	use { 'folke/noice.nvim',
+	opts = {
+		background_color = "#000000"
+	},
+	requires = {
+		'MunifTanjim/nui.nvim',
+		'rcarriga/nvim-notify',
+	}
+}
 
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if packer_bootstrap then
-		require('packer').sync()
-	end
+-- Automatically set up your configuration after cloning packer.nvim
+-- Put this at the end after all plugins
+if packer_bootstrap then
+	require('packer').sync()
+end
 end)

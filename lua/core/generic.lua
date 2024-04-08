@@ -19,8 +19,6 @@ vim.opt.tags = 'tags'
 -- [clipboard related settings]
 -- fixme: try to keep as less of this as possible
 vim.cmd[[ set clipboard=unnamed ]]
---vim.cmd[[ map! <silent> <F4> <ESC>:NERDTreeToggle<CR> ]]
---vim.cmd[[ map <silent> <F4> :NERDTreeToggle<CR> ]]
 vim.cmd[[ map! <silent> <F4> <ESC>:NvimTreeToggle<CR> ]]
 vim.cmd[[ map <silent> <F4> :NvimTreeToggle<CR> ]]
 vim.cmd[[
@@ -201,6 +199,7 @@ vim.cmd[[
 
 -- Setting the keymappings for floaterm
 vim.cmd[[
+	let g:floaterm_title = " ostream-shell "
 	let g:floaterm_width = 0.9
 	let g:floaterm_height = 0.9
 	let g:floaterm_keymap_toggle = '<F12>'

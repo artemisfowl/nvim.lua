@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/sb/.local/share/nvim/site/pack/packer/start/Tagbar",
     url = "https://github.com/vim-scripts/Tagbar"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/sb/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/sb/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -128,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sb/.local/share/nvim/site/pack/packer/start/noice.nvim",
     url = "https://github.com/folke/noice.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/sb/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,

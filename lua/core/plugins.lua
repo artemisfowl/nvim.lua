@@ -51,19 +51,23 @@ return require('packer').startup(function(use)
 		},
 	}
 	use { 'folke/noice.nvim',
-	opts = {
-		background_color = "#000000"
-	},
-	requires = {
-		'MunifTanjim/nui.nvim',
-		'rcarriga/nvim-notify',
+		opts = {
+			background_color = "#000000"
+		},
+		requires = {
+			'MunifTanjim/nui.nvim',
+			'rcarriga/nvim-notify',
+		}
 	}
-}
+	use { 'akinsho/bufferline.nvim',
+		tag = "*",
+		requires = {'nvim-tree/nvim-web-devicons' }
+	}
 
 
--- Automatically set up your configuration after cloning packer.nvim
--- Put this at the end after all plugins
-if packer_bootstrap then
-	require('packer').sync()
-end
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require('packer').sync()
+	end
 end)

@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
 	-- setting up the undo tree using mundo
 	use { 'simnalamburt/vim-mundo' }
 
+	-- trying out a vimscript specific breadcrumb plugin
+	use { 'wellle/context.vim' }
+
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

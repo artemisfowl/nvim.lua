@@ -218,3 +218,7 @@ vim.cmd[[
 ]]
 vim.cmd[[ map! <silent> <F2> <ESC>:MundoToggle<CR> ]]
 vim.cmd[[ map <silent> <F2> :MundoToggle<CR> ]]
+
+-- enabling context check
+vim.cmd[[ map! <silent> <F3> <ESC>:ContextToggle<CR> ]]
+vim.cmd[[ map <silent> <F3> :ContextToggle<CR> ]]

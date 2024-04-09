@@ -50,19 +50,24 @@ return require('packer').startup(function(use)
 			'nvim-tree/nvim-web-devicons', -- optional
 		},
 	}
-	--use { 'folke/noice.nvim',
-		--opts = {
-			--background_color = "#000000"
-		--},
-		--requires = {
-			--'MunifTanjim/nui.nvim',
-			--'rcarriga/nvim-notify',
-		--}
-	--}
-	--use { 'akinsho/bufferline.nvim',
-		--tag = "*",
-		--requires = {'nvim-tree/nvim-web-devicons' }
-	--}
+
+	-- because I want the experimental nice things
+	use { 'folke/noice.nvim',
+		opts = {
+			background_color = "#000000"
+		},
+		requires = {
+			'MunifTanjim/nui.nvim',
+			'rcarriga/nvim-notify',
+		}
+	}
+	use { 'akinsho/bufferline.nvim',
+		tag = "*",
+		requires = {'nvim-tree/nvim-web-devicons' }
+	}
+
+	-- setting up the undo tree using mundo
+	use { 'simnalamburt/vim-mundo' }
 
 	-- setting up the undo tree using mundo
 	--use { 'simnalamburt/vim-mundo' }

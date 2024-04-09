@@ -64,6 +64,9 @@ return require('packer').startup(function(use)
 		requires = {'nvim-tree/nvim-web-devicons' }
 	}
 
+	-- setting up the undo tree using mundo
+	use { 'simnalamburt/vim-mundo' }
+
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

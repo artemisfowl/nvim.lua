@@ -210,3 +210,11 @@ vim.cmd[[
 	" Remove any trailing whitespace that is in the file
 	autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 ]]
+
+-- configuration for vim mundo - needed for undoing for all types of files
+vim.cmd[[
+	set undofile
+	set undodir=~/.undo
+]]
+vim.cmd[[ map! <silent> <F2> <ESC>:MundoToggle<CR> ]]
+vim.cmd[[ map <silent> <F2> :MundoToggle<CR> ]]

@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
 	}
 	use { "catppuccin/nvim", as = "catppuccin" }
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+	use {'williamboman/mason.nvim'}
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',

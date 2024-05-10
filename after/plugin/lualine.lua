@@ -1,4 +1,3 @@
---[[
 local colors = {
   red = '#ca1243',
   grey = '#a0a1a7',
@@ -123,4 +122,3 @@ require('lualine').setup {
     lualine_x = {},
   },
 }
---]]

@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
 
 	use {'nvim-tree/nvim-web-devicons'}
 	use {'vim-scripts/Tagbar'}
-	use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
+	-- use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
 	use {'f-person/git-blame.nvim'}
 	use {'tpope/vim-fugitive'}
 	use {'voldikss/vim-floaterm'}

@@ -19,8 +19,8 @@ vim.opt.tags = 'tags'
 -- [clipboard related settings]
 -- fixme: try to keep as less of this as possible
 vim.cmd[[ set clipboard=unnamed ]]
-vim.cmd[[ map! <silent> <F4> <ESC>:NvimTreeToggle<CR> ]]
-vim.cmd[[ map <silent> <F4> :NvimTreeToggle<CR> ]]
+vim.cmd[[ map! <silent> <F4> <ESC>:NvimTreeToggle<CR>]]
+vim.cmd[[ map <silent> <F4> :NvimTreeToggle<CR>]]
 vim.cmd[[
 	augroup highlight_yank
 	autocmd!
@@ -222,3 +222,6 @@ vim.cmd[[ map <silent> <F2> :MundoToggle<CR> ]]
 -- enabling context check
 vim.cmd[[ map! <silent> <F3> <ESC>:ContextToggle<CR> ]]
 vim.cmd[[ map <silent> <F3> :ContextToggle<CR> ]]
+
+-- setting up the go binary path
+vim.cmd[[ let g:go_bin_path = "/home/oldgod/data/programs/nix_execs/language/servers/" ]]

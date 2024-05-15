@@ -63,13 +63,16 @@ return require('packer').startup(function(use)
 			'rcarriga/nvim-notify',
 		}
 	}--]]
-	use { 'akinsho/bufferline.nvim',
-		tag = "*",
-		requires = {'nvim-tree/nvim-web-devicons' }
-	}
+	--use { 'akinsho/bufferline.nvim',
+		--tag = "*",
+		--requires = {'nvim-tree/nvim-web-devicons' }
+	--}
 
 	-- setting up the undo tree using mundo
 	use { 'simnalamburt/vim-mundo' }
+
+	-- setting up nvim for go development
+	use { 'fatih/vim-go' }
 
 	-- setting up the undo tree using mundo
 	--use { 'simnalamburt/vim-mundo' }

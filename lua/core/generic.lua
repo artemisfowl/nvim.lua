@@ -235,7 +235,7 @@ vim.cmd[[
 	xnoremap <C-n> :m'>+<CR>gv=gv
 
 	" move current line up one line
-	nnoremap <C-p>  :<C-u>m-2<CR>==
+	nnoremap <C-m>  :<C-u>m-2<CR>==
 
 	" move current line down one line
 	nnoremap <C-n> :<C-u>m+<CR>==

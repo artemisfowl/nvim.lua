@@ -12,6 +12,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l") -- move the cursor from the top split to 
 vim.keymap.set("n", "<leader>q", "<C-w>q") -- close the current split
 vim.keymap.set("n", "<leader>h", ":noh<CR>") -- remove the highlight till the next search
 vim.keymap.set("n", "<C-t>", "<C-w><C-r>") -- Swap the splits
+vim.keymap.set("n", "<F6>" , "<ESC>:TodoQuickFix<CR>") -- open the quickfix window for the current project/workspace
+vim.keymap.set("n", "<C-a>", "<ESC>:TodoTelescope<CR>") -- open the telescope window to find the todo et al comments
 
 -- [visual mode] custom key mappings
 vim.keymap.set("v", "H", "^") -- move the cursor to the start of the current line
@@ -29,3 +31,6 @@ vim.keymap.set('n', '<C-f>', builtin.find_files, {desc = "Open a file from the c
 vim.keymap.set('n', '<C-g>', builtin.live_grep, {desc = "Grep inside the project"})
 vim.keymap.set('n', '<C-p>', builtin.buffers, {desc = "Show the buffers already open"})
 vim.keymap.set('n', '<leader>d', builtin.help_tags, {desc = "Show the help tags present for Telescope"})
+
+-- [Goto Defintion] {was experimental}
+vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})

@@ -17,6 +17,12 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	use {
+		"folke/todo-comments.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim"
+		}
+	}
 	use { "catppuccin/nvim", as = "catppuccin" }
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 	use {'williamboman/mason.nvim'}
@@ -53,26 +59,56 @@ return require('packer').startup(function(use)
 		},
 	}
 
+  use { 'echasnovski/mini.indentscope', version = '*' }
+
+	-- For checking the references
+	use {'VidocqH/lsp-lens.nvim'}
+
 	-- because I want the experimental nice things
 	--use { 'folke/noice.nvim',
-		--opts = {
-			--background_color = "#000000"
-		--},
-		--requires = {
-			--'MunifTanjim/nui.nvim',
-			--'rcarriga/nvim-notify',
-		--}
+	--opts = {
+	--background_color = "#000000"
+	--},
+	--requires = {
+	--'MunifTanjim/nui.nvim',
+	--'rcarriga/nvim-notify',
+	--}
 	--}
 	--use { 'akinsho/bufferline.nvim',
-		--tag = "*",
-		--requires = {'nvim-tree/nvim-web-devicons' }
+	--tag = "*",
+	--requires = {'nvim-tree/nvim-web-devicons' }
 	--}
+
+	-- Need to have a proper commenting plugin
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+				require('Comment').setup()
+		end
+	}
+
+	-- Goto the preview
+	use {
+		'rmagatti/goto-preview',
+		config = function()
+			require('goto-preview').setup {}
+		end
+	}
 
 	-- setting up the undo tree using mundo
 	use { 'simnalamburt/vim-mundo' }
 
 	-- setting up nvim for go development
 	use { 'fatih/vim-go' }
+
+	-- setting up blankline indentation
+	--[[use {
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("ibl").setup()
+		end
+	}
+	--]]
 
 	-- setting up the undo tree using mundo
 	--use { 'simnalamburt/vim-mundo' }

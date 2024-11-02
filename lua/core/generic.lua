@@ -225,3 +225,18 @@ vim.cmd[[ map <silent> <F3> :ContextToggle<CR> ]]
 
 -- setting up the go binary path
 vim.cmd[[ let g:go_bin_path = "/home/oldgod/data/programs/nix_execs/language/servers/" ]]
+
+-- moving lines in visual mode
+vim.cmd[[
+	" move selected lines up one line
+	xnoremap <C-p>  :m-2<CR>gv=gv
+
+	" move selected lines down one line
+	xnoremap <C-n> :m'>+<CR>gv=gv
+
+	" move current line up one line
+	nnoremap <C-p>  :<C-u>m-2<CR>==
+
+	" move current line down one line
+	nnoremap <C-n> :<C-u>m+<CR>==
+]]

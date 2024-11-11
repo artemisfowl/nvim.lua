@@ -78,7 +78,7 @@ vim.cmd[[
 	inoremap jj <Esc>:w<CR>
 
 	" Forget about multiple captial J - do no operation if that key is spammed
-	nnoremap JJJJ <Nop>
+	"nnoremap JJJJ <Nop>
 
 	" Highlight the parentheses
 	highlight MatchParen ctermbg=4
@@ -229,14 +229,14 @@ vim.cmd[[ let g:go_bin_path = "/home/oldgod/data/programs/nix_execs/language/ser
 -- moving lines in visual mode
 vim.cmd[[
 	" move selected lines up one line
-	xnoremap <C-p>  :m-2<CR>gv=gv
+	xnoremap <S-k>  :m-2<CR>gv=gv
 
 	" move selected lines down one line
-	xnoremap <C-n> :m'>+<CR>gv=gv
+	xnoremap <S-j> :m'>+<CR>gv=gv
 
 	" move current line up one line
-	nnoremap <C-m>  :<C-u>m-2<CR>==
+	nnoremap <S-k>  :<C-u>m-2<CR>==
 
 	" move current line down one line
-	nnoremap <C-n> :<C-u>m+<CR>==
+	nnoremap <S-j> :<C-u>m+<CR>==
 ]]

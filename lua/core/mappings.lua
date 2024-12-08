@@ -13,7 +13,6 @@ vim.keymap.set("n", "<leader>q", "<C-w>q") -- close the current split
 vim.keymap.set("n", "<leader>h", ":noh<CR>") -- remove the highlight till the next search
 vim.keymap.set("n", "<C-t>", "<C-w><C-r>") -- Swap the splits
 vim.keymap.set("n", "<F6>" , "<ESC>:TodoQuickFix<CR>") -- open the quickfix window for the current project/workspace
-vim.keymap.set("n", "<C-a>", "<ESC>:TodoTelescope<CR>") -- open the telescope window to find the todo et al comments
 
 -- [visual mode] custom key mappings
 vim.keymap.set("v", "H", "^") -- move the cursor to the start of the current line

@@ -240,3 +240,12 @@ vim.cmd[[
 	" move current line down one line
 	nnoremap <S-j> :<C-u>m+<CR>==
 ]]
+
+vim.cmd[[
+	" Goto line number
+	nnoremap <space>g :
+
+	" Search for string - f for forward, r for reverse
+	nnoremap <space>f /
+	nnoremap <space>r ?
+]]

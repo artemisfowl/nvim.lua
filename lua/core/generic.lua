@@ -248,4 +248,7 @@ vim.cmd[[
 	" Search for string - f for forward, r for reverse
 	nnoremap <space>f /
 	nnoremap <space>r ?
+
+	" create or open a file using the :e command - renaming it to space+e
+	nnoremap <space>e :e
 ]]
